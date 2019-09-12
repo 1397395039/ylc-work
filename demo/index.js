@@ -1,0 +1,3 @@
+ducument . body . onclick = function(){
+                                     
+}
