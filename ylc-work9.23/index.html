@@ -21,12 +21,15 @@
        for(var i = 0 ;i<a.length;i++){
           a[i].style.height = "50px";
           a[i].style.width = "50px";
-          a[i].style.backgroundColor = "red";
+          if(i = 2){
+              a[2].className = "blue";
+          }else{
+              a.style.backgroundColor = "red";
+          }
           a[i].style.display = "inline-block";
           a[i].style.margin = "20px";
        }
-       a[2].style.backgroundColor = "";
-       a[2].className = "blue";
+       
     </script>
 </body>
 </html>
