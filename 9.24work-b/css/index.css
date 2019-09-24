@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica","Arial",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    width: 100%;
+    min-height: 100%;
+    color: rgba(0,0,0,.87);
+    text-shadow: none;
+}
+p,ul,ol,dl,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/*居中*/
+div.main{
+	padding: 10px 15px;
+	width:960px;
+	margin: 10px auto;
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/*导航栏*/
+.header-top{
+	background-color: #3f51b5;
+	width: 100%;
+	height: 200px;
+	position: absolute;
+}
+.header-top>div.site-logo{
+	background: url(../img/site-logo.png) 50% no-repeat;
+	background-size: cover;
+	width: 120px;
+	height: 120px;
+	margin: 15px auto;
+}
+.main>div{
+	
+}
+.header-top>span{
+	display: block;
+	width: 165px;
+	color: white;
+	font-size: 14px;
+	margin: 0 auto;
+}
+#nav-top{
+	background:#3a4ba7;
+	width:100%;
+	height:45px;
+}
+#nav-top-in{
+	background:#3a4ba7;
+	width:960px;
+	height:45px;
+	margin: 0 auto;
+}
+#nav-top-in>a{
+	text-align: center;
+	color:#f7f7f7;
+	display:inline-block;
+	width:24%;
+	height:45px;
+	line-height: 45px;
+	text-decoration:none;
+	font-size:13px;
+}
+#nav-top-in>a:hover{
+	color:#FFFFFF;
+}
+.main>div{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 446px;
+	width: 300px; 
+	border: 1px solid rgba(0,0,0,.1);
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+}
+.main>div>h2{
+	width:150px;
+	height: 28px;
+	padding: 16px;
+	font-size: 24px;
+    font-weight: 100;
+}
+.main>div>p{
+	color: rgba(0,0,0,.54);
+    font-size: 16px;
+    line-height: 18px;
+    padding: 16px;
+    width: 90%;
+}
+.main>div>div{
+	padding: 13px;
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+.main>div>div>a{
+	width: 125px;
+	height: 36px;
+	color: rgb(255,64,129);
+    border-radius: 2px;
+    position: relative;
+    height: 36px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    line-height: 36px;
+}
+.main>div>div>a:hover{
+	background-color:#e0e0e0;
+}
+#footer{
+	width: 100%;
+	height: 100px;
+	background-color: #424242;
+	text-align: center;
+}
+#footer div{
+	width: 600px;
+	margin: 0 auto;
+	padding-top:40px ;
+}
+#footer div p{
+	float: left;
+	list-style: none;
+	font-size: 14px;
+}
