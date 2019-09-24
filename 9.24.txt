@@ -3,7 +3,9 @@
 ###参与人:杨立超
 
 1.获取元素的方法有哪些?并简单描述该方法.
-答:获取标签名  getElmentById  getElmentsByTagName
+答:
+  获取ID   getElmentById
+  获取标签名    getElmentsByTagName
   获取类名     getElmentsByClassName
   用选择器选择  querySelector   querySelectorAll
 
