@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+                * {
+                        margin: 0;
+                        padding: 0;
+                }
+
+                div {
+                        width: 500px;
+                        height: 50px;
+
+                }
+        </style>
+</head>
+
+<body>
+        <div>
+                应到人名单：李信，赵信，曹操，郑和，杜甫，王江，韩寒
+        </div>
+        <input id="in1" type="text">
+        <button id="btn1">签到</button>
+        <button id="btn2">未签到名单</button>
+        <script>
+                var in1 = document.getElementById('in1');
+                var btn1 = document.getElementById('btn1');
+                var btn2 = document.getElementById('btn2');
+                var str = '李信赵信曹操郑和杜甫王江韩寒';
+                var arr = [];
+                btn1.onclick = function () {
+                        arr.push(in1.value);
+                        in1.value = "";
+                }
+                btn2.onclick = function () {
+                        var no = new RegExp(arr.join('|'), "ig");
+                        var noname = str.replace(no, "");
+                        document.body.innerHTML = '未签到人有:' + noname;
+                }
+        </script>
+</body>
+
+</html>
