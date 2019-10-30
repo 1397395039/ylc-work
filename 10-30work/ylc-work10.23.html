@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        li {
+            width: 50px;
+            height: 50px;
+            float: left;
+            border-radius: 50%;
+            list-style: none;
+            border: 5px solid white;
+            box-shadow: 5px 5px 5px #888888;
+            float: left;
+            margin-top: 50px;
+        }
+
+        .sdiv {
+            float: left;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow:  5px 5px #888888;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sdiv" id="sdiv"></div>
+        <ul>
+            <li id="i1" style="background-color:blue;"></li>
+            <li id="i2" style="background-color:red;"></li>
+            <li id="i3" style="background-color:yellow;"></li>
+            <li id="i4" style="background-color:green;"></li>
+            <li id="i5" style="background-color:greenyellow;"></li>
+            <li id="i6" style="background-color:gray;"></li>
+            <li id="i7" style="background-color:brown;"></li>
+        </ul>
+        
+    <script>
+        $("#i1").click(function(){
+            $("body").css("background-color","blue");
+            $("sdiv").css("background-color","blue");
+        })
+        $("#i2").click(function(){
+            $("body").css("background-color","red");
+            $("sdiv").css("background-color","red");
+        })
+        $("#i3").click(function(){
+            $("body").css("background-color","yellow");
+            $("sdiv").css("background-color","yellow");
+        })
+       
+        $("#i4").click(function(){
+            $("body").css("background-color","green");
+            $("sdiv").css("background-color","green");
+        })
+        $("#i5").click(function(){
+            $("body").css("background-color","greenyellow");
+            $("sdiv").css("background-color","greenyellow");
+        })
+        $("#i6").click(function(){
+            $("body").css("background-color","gray");
+            $("sdiv").css("background-color","gray");
+        })
+        $("#i7").click(function(){
+            $("body").css("background-color","brown");
+            $("sdiv").css("background-color","brown");
+        })
+        $("li").hide();
+        var $a=0;
+        $("#sdiv").click(function(){
+            $a++;
+            if($a%2==0){
+                $("li").hide("slow");
+            }else{
+                $("li").show("slow");
+            }
+        })
+    </script>
+</body>
+<html>
