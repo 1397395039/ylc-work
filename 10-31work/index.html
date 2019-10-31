@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <table border="1px">
+        <tr>
+            <td>名称</td>
+            <td>数量</td>
+            <td>单价</td>
+            <td>总计</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="" id="hw" value="" checked />
+                <span>华为mate20</span>
+            </td>
+            <td>
+                <button id="jia1">+</button>
+                <span id="num1">1</span>
+                <button id="jian1">-</button>
+            </td>
+            <td>￥<span id="jiage1">4999</span></td>
+            <td>￥<span id="hua">0</span></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="" id="xm" value="" checked/>
+                <span>小米8</span>
+            </td>
+            <td>
+                <button id="jia2">+</button>
+                <span id="num2">1</span>
+                <button id="jian2">-</button>
+            </td>
+            <td>￥<span id="jiage2">2999</span></td>
+            <td>￥<span id="xmi">0</span></td>
+        </tr>
+        <tr>
+            <td>合计件数</td>
+            <td><span id="num3"></span></td>
+            <td>总价</td>
+            <td>￥<span id="zonghe">0</span></td>
+        </tr>
+    </table>
+    <script>
+        $("#jia1").click(function () {
+            $("#num1").html(parseInt($("#num1").html()) + 1);
+            $("#hua").html((parseInt($("#jiage1").html())) * (parseInt($("#num1").html())));
+            var a = 0;
+            $('#hua').each(function () {
+                a += (parseInt($(this).html()) + parseInt($("#xmi").html()));
+
+                $("#zonghe").html(a);
+            });
+
+            $("#num3").html(Number($("#num1").html()) + Number($("#num2").html()));
+        })
+        $("#jian1").click(function () {
+
+            var hn = parseInt($("#num1").html()) - 1;
+            if (hn == 0) {
+                return;
+            }
+            $("#num1").html(hn);
+            $("#hua").html(hn * parseInt($("#jiage1").html()));
+            var a = 0;
+            $('#hua').each(function () {
+                var h = (parseInt($(this).html()) + parseInt($("#xmi").html()));
+                a += h;
+                $("#zonghe").html(a);
+            });
+            $("#num3").html(Number($("#num1").html()) + Number($("#num2").html()));
+
+        })
+        $("#jia2").click(function () {
+            $("#num2").html(parseInt($("#num2").html()) + 1);
+            $("#xmi").html((parseInt($("#jiage2").html())) * (parseInt($("#num2").html())));
+            var a = 0;
+            $('#xmi').each(function () {
+                a += (parseInt($(this).html()) + parseInt($("#hua").html()));
+                $("#zonghe").html(a);
+            });
+
+            $("#num3").html(Number($("#num1").html()) + Number($("#num2").html()));
+        })
+        $("#jian2").click(function () {
+
+            var xn = parseInt($("#num2").html()) - 1;
+            if (xn == 0) {
+                return;
+            }
+            $("#num2").html(xn);
+            $("#xmi").html(xn * parseInt($("#jiage2").html()));
+            var a = 0;
+            $('#xmi').each(function () {
+                var h = (parseInt($(this).html()) + parseInt($("#hua").html()));
+                a += h;
+                $("#zonghe").html(a);
+            });
+            $("#num3").html(Number($("#num1").html()) + Number($("#num2").html()));
+        })
+    </script>
+</body>
+
+</html>
